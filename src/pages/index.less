@@ -1,0 +1,36 @@
+:global(#app) {
+  .preface {
+    text-align: center;
+    color: #3b82f6;
+    margin-bottom: 20px;
+  }
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    >div {
+      flex: 1 1 40vw;
+    }
+    &::after {
+      content: '';
+      flex: 1 1 40vw;
+      width: 40vw;
+      margin: 1vw 2vw;
+    }
+    @media screen and (min-width: 1080px) {
+      margin: 0 10vw;
+      >div {
+        flex: 1 1 30vw;
+      }
+      &::after {
+        content: '';
+        flex: 1 1 30vw;
+        width: 30vw;
+        margin: 1vw 2vw;
+      }
+    }
+    @media screen and (min-width: 720px) and (max-width: 1080px){
+      margin: 0 5vw;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+@card-width: 40vw;
+@card-height: 25vw;
+
+.card {
+  width: @card-width;
+  height: @card-height;
+  box-shadow: 3px 3px 10px 0 fade(#999, 80);
+  border-radius: 10px;
+  margin: 1vw 2vw;
+  text-align: center;
+  line-height: @card-height;
+  overflow: hidden;
+  transition-duration: 0.3s;
+  &:hover {
+    scale: 1.05;
+    cursor: zoom-in;
+  }
+  .content {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    .layer {
+      opacity: 0;
+      background: #fff;
+      font-size: 32px;
+      &:hover {
+        opacity: 1;
+        background-color: fade(#fff, 50);
+      }
+    }
+  }
+}
